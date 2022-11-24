@@ -50,7 +50,7 @@
             <div class="row">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a href="{{route('home')}}" class="logo">
                         <img src="{{ asset('images/logo.png') }}" alt="">
                     </a>
                     <!-- ***** Logo End ***** -->
@@ -65,11 +65,11 @@
                     <!-- ***** Search End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="browse.html">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="streams.html">Streams</a></li>
-                        <li><a href="profile.html">Profile <img src="{{ asset('images/profile-header.jpg') }}"
+                        <li><a href="{{route('home')}}" class="active">Home</a></li>
+                        <li><a href="{{route('browse')}}">Browse</a></li>
+                        <li><a href="{{route('details')}}">Details</a></li>
+                        <li><a href="{{route('streams')}}">Streams</a></li>
+                        <li><a href="{{route('proflie')}}">Profile <img src="{{ asset('images/profile-header.jpg') }}"
                                     alt=""></a></li>
                     </ul>
                     <a class='menu-trigger'>

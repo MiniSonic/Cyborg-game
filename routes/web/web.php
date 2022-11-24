@@ -20,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/browse', 'HomeController@index')->name('browse');
+Route::get('/details', 'HomeController@index')->name('details');
+Route::get('/streams', 'HomeController@index')->name('streams');
+Route::get('/proflie', 'HomeController@index')->name('proflie');
