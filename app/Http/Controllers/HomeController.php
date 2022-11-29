@@ -25,5 +25,17 @@ class HomeController extends Controller
     {
         return view('pages.home');
     }
+    public function browse(){
+        return view('pages.browse');
+    }
+    public function details(){
+        return view('pages.details');
+    }
+    public function streams(){
+        return view('pages.streams');
+    }
+    public function profile(){
+        return view('pages.profile');
+    }
     
 }
