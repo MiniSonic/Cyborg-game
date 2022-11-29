@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'username', 'avatar',
     ];
 
     /**
@@ -40,14 +40,14 @@ class User extends Authenticatable
     ];
 
 
-    public function roles(){
-        $this->hasMany(Role::class);
-    }
     public function permissions(){
-        $this->hasMany(Permission::class);
+        return $this->belongsToMany(Permission::class);
+    }
+    public function roles(){
+        return $this->belongsToMany(Role::class);
     }
     public function games(){
-        $this->hasMany(Game::class);
+        return $this->hasMany(Game::class);
     }
     public function userHasRole($role_name){
         foreach($this->roles as $role){
@@ -57,14 +57,11 @@ class User extends Authenticatable
         }
         return false;
     }
-    // public function assignRole($role_name){
-    //     $role = Role::where('name', 'Admin');
-    //     $this->attach($role);
-    // }
-
 
     public function lives(){
-        $this->hasMany(Lived::class);
+        return $this->hasMany(Live::class);
     }
-
 }
+    
+
+

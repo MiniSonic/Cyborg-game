@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
-use App\Game;
+
 use App\Role;
 
 class DatabaseSeeder extends Seeder
