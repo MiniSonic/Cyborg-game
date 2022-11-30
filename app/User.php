@@ -40,11 +40,13 @@ class User extends Authenticatable
     ];
 
 
+
     public function permissions(){
         return $this->belongsToMany(Permission::class);
     }
     public function roles(){
         return $this->belongsToMany(Role::class);
+
     }
     public function games(){
         return $this->hasMany(Game::class);
