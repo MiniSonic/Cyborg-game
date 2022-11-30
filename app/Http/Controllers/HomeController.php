@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Game;
 
 class HomeController extends Controller
 {
@@ -23,10 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home');
+        $games = Game::where('id', '<', '9')->get();
+        return view('pages.home', ['games' => $games]);
     }
     public function browse(){
-        return view('pages.browse');
+        $featured = Game::where('id', '<', '5')->get();
+        $downloaded = Game::where('id', '<', '4')->orderBy('downloads', 'desc')->get();
+        return view('pages.browse', ['featured' => $featured, 'downloaded' => $downloaded]);
     }
     public function details(){
         return view('pages.details');

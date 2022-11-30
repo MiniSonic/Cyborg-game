@@ -16,4 +16,7 @@ class Game extends Model
     public function getPostImageAttribute($value){
         return asset($value);
     }
+    public function live(){
+        return $this->belongsToMany(Live::class);
+    }
 }

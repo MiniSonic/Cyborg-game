@@ -1,5 +1,6 @@
 <?php
 
+use App\Game;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,9 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/browse', 'HomeController@browse')->name('browse');
 Route::get('/details', 'HomeController@details')->name('details');
-Route::get('/streams', 'HomeController@streams')->name('streams');
+Route::get('/streams', 'LiveController@index')->name('streams.index');
 Route::get('/proflie', 'HomeController@profile')->name('proflie');
+
+
+
+Route::get('/details/{game}', 'GameController@show' )->name('game.show');

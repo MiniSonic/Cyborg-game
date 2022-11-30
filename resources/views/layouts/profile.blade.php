@@ -11,7 +11,7 @@
               <div class="main-profile ">
                 <div class="row">
                   <div class="col-lg-4">
-                    <img src="{{assets('images/profile.jpg')}}" alt="" style="border-radius: 23px;">
+                    <img src="{{asset('images/profile.jpg')}}" alt="" style="border-radius: 23px;">
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">
@@ -44,7 +44,7 @@
                         <div class="col-lg-3 col-sm-6">
                           <div class="item">
                             <div class="thumb">
-                              <img src="{{assets('images/clip-01.jpg')}}" alt="" style="border-radius: 23px;">
+                              <img src="{{asset('images/clip-01.jpg')}}" alt="" style="border-radius: 23px;">
                               <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
@@ -56,7 +56,7 @@
                         <div class="col-lg-3 col-sm-6">
                           <div class="item">
                             <div class="thumb">
-                              <img src="{{assets('images/clip-02.jpg')}}" alt="" style="border-radius: 23px;">
+                              <img src="{{asset('images/clip-02.jpg')}}" alt="" style="border-radius: 23px;">
                               <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
@@ -68,7 +68,7 @@
                         <div class="col-lg-3 col-sm-6">
                           <div class="item">
                             <div class="thumb">
-                              <img src="{{assets('images/clip-03.jpg')}}" alt="" style="border-radius: 23px;">
+                              <img src="{{asset('images/clip-03.jpg')}}" alt="" style="border-radius: 23px;">
                               <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
@@ -80,7 +80,7 @@
                         <div class="col-lg-3 col-sm-6">
                           <div class="item">
                             <div class="thumb">
-                              <img src="{{assets('images/clip-04.jpg')}}" alt="" style="border-radius: 23px;">
+                              <img src="{{asset('images/clip-04.jpg')}}" alt="" style="border-radius: 23px;">
                               <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
                             </div>
                             <div class="down-content">
@@ -121,7 +121,7 @@
               </div>
               <div class="item">
                 <ul>
-                  <li><img src="{{assets('images/game-02.jpg')}}" alt="" class="templatemo-item"></li>
+                  <li><img src="{{asset('images/game-02.jpg')}}" alt="" class="templatemo-item"></li>
                   <li><h4>Fortnite</h4><span>Sandbox</span></li>
                   <li><h4>Date Added</h4><span>22/06/2036</span></li>
                   <li><h4>Hours Played</h4><span>745 H 22 Mins</span></li>
@@ -131,7 +131,7 @@
               </div>
               <div class="item last-item">
                 <ul>
-                  <li><img src="{{assets('images/game-03.jpg')}}" alt="" class="templatemo-item"></li>
+                  <li><img src="{{asset('images/game-03.jpg')}}" alt="" class="templatemo-item"></li>
                   <li><h4>CS-GO</h4><span>Sandbox</span></li>
                   <li><h4>Date Added</h4><span>21/04/2022</span></li>
                   <li><h4>Hours Played</h4><span>632 H 46 Mins</span></li>
