@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Game;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -40,6 +41,11 @@ class HomeController extends Controller
     }
     public function profile(){
         return view('pages.profile');
+    }
+
+
+    public function profileShow(User $user){
+        return view('pages.profileUser', ['user' => $user]);
     }
     
 }
