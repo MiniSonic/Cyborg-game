@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Role;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        factory('App\User', 10)->create()->each(function ($user){
+            $role = Role::find(1);
+            $user->roles()->attach($role);
+            $user->games()->save(factory('App\Game'))->make();
+        });
     }
 }

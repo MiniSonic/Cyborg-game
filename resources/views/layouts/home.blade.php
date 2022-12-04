@@ -13,7 +13,7 @@
                                     <h6>Welcome To Cyborg</h6>
                                     <h4><em>Browse</em> Our Popular Games Here</h4>
                                     <div class="main-button">
-                                        <a href="browse.html">Browse Now</a>
+                                        <a href="{{route('browse')}}">Browse Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -29,96 +29,21 @@
                                     <h4><em>Most Popular</em> Right Now</h4>
                                 </div>
                                 <div class="row">
+                                    @foreach($games as $game)
                                     <div class="col-lg-3 col-sm-6">
                                         <div class="item">
                                             <img src="{{ asset('images/popular-01.jpg') }}" alt="">
-                                            <h4>Fortnite<br><span>Sandbox</span></h4>
+                                            <h4>{{$game->title}}<br><span>{{$game->category}}</span></h4>
                                             <ul>
-                                                <li><i class="fa fa-star"></i> 4.8</li>
-                                                <li><i class="fa fa-download"></i> 2.3M</li>
+                                                <li><i class="fa fa-star"></i> {{$game->votes}}</li>
+                                                <li><i class="fa fa-download"></i>{{$game->downloads}}</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <div class="item">
-                                            <img src="{{ asset('images/popular-02.jpg') }}" alt="">
-                                            <h4>PubG<br><span>Battle S</span></h4>
-                                            <ul>
-                                                <li><i class="fa fa-star"></i> 4.8</li>
-                                                <li><i class="fa fa-download"></i> 2.3M</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <div class="item">
-                                            <img src="{{ asset('images/popular-03.jpg') }}" alt="">
-                                            <h4>Dota2<br><span>Steam-X</span></h4>
-                                            <ul>
-                                                <li><i class="fa fa-star"></i> 4.8</li>
-                                                <li><i class="fa fa-download"></i> 2.3M</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <div class="item">
-                                            <img src="{{ asset('images/popular-04.jpg') }}" alt="">
-                                            <h4>CS-GO<br><span>Legendary</span></h4>
-                                            <ul>
-                                                <li><i class="fa fa-star"></i> 4.8</li>
-                                                <li><i class="fa fa-download"></i> 2.3M</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-sm-6">
-                                                    <div class="item inner-item">
-                                                        <img src="{{ asset('images/popular-05.jpg') }}" alt="">
-                                                        <h4>Mini Craft<br><span>Legendary</span></h4>
-                                                        <ul>
-                                                            <li><i class="fa fa-star"></i> 4.8</li>
-                                                            <li><i class="fa fa-download"></i> 2.3M</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-sm-6">
-                                                    <div class="item">
-                                                        <img src="{{ asset('images/popular-06.jpg') }}"
-                                                            alt="">
-                                                        <h4>Eagles Fly<br><span>Matrix Games</span></h4>
-                                                        <ul>
-                                                            <li><i class="fa fa-star"></i> 4.8</li>
-                                                            <li><i class="fa fa-download"></i> 2.3M</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <div class="item">
-                                            <img src="{{ asset('images/popular-07.jpg') }}" alt="">
-                                            <h4>Warface<br><span>Max 3D</span></h4>
-                                            <ul>
-                                                <li><i class="fa fa-star"></i> 4.8</li>
-                                                <li><i class="fa fa-download"></i> 2.3M</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-sm-6">
-                                        <div class="item">
-                                            <img src="{{ asset('images/popular-08.jpg') }}" alt="">
-                                            <h4>Warcraft<br><span>Legend</span></h4>
-                                            <ul>
-                                                <li><i class="fa fa-star"></i> 4.8</li>
-                                                <li><i class="fa fa-download"></i> 2.3M</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                     <div class="col-lg-12">
                                         <div class="main-button">
-                                            <a href="browse.html">Discover Popular</a>
+                                            <a href="{{route('browse')}}">Discover Popular</a>
                                         </div>
                                     </div>
                                 </div>

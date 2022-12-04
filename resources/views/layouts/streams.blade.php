@@ -1,86 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Cyborg - Awesome HTML5 Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('css/templatemo-cyborg-gaming.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.css')}}">
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
-
-TemplateMo 579 Cyborg Gaming
-
-https://templatemo.com/tm-579-cyborg-gaming
-
--->
-  </head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="{{asset('images/logo.png')}}" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Search End ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Search End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="browse.html">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="streams.html" class="active">Streams</a></li>
-                        <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-  </header>
+@include('layouts.reuse.header')
   <!-- ***** Header Area End ***** -->
 
   <div class="container">
@@ -96,6 +14,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h4><em>Live</em> Streams</h4>
                 </div>
                 <div class="owl-features owl-carousel">
+                  @foreach($lives as $live)
                   <div class="item">
                     <div class="thumb">
                       <img src="{{asset('images/featured-01.jpg')}}" alt="">
@@ -103,77 +22,13 @@ https://templatemo.com/tm-579-cyborg-gaming
                         <h6>2.4K Streaming</h6>
                       </div>
                     </div>
-                    <h4>CS-GO<br><span>249K Downloads</span></h4>
+                    <h4>{{$live->title}}<br><span>249K Downloads</span></h4>
                     <ul>
                       <li><i class="fa fa-star"></i> 4.8</li>
                       <li><i class="fa fa-download"></i> 2.3M</li>
                     </ul>
                   </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-02.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Gamezer<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-03.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Island Rusty<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-01.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>CS-GO<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-02.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Gamezer<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-03.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Island Rusty<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
+                  @endforeach
                 </div>
               </div>
             </div>
@@ -183,46 +38,21 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h4><em>Top</em> Streamers</h4>
                 </div>
                 <ul>
+                  <?php $stt = 1 ?>
+
+                  @foreach($streamers as $stream)
                   <li>
-                    <span>01</span>
+                    <?php if ($stt > 5) break; ?>
+                    <span>{{$stt}}</span>
                     <img src="{{asset('images/avatar-01.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; margin-right: 15px;">
-                    <h6><i class="fa fa-check"></i> LahutaM</h6>
+                    <h6><i class="fa fa-check"></i> {{$stream->username}}</h6>
                     <div class="main-button">
                       <a href="#">Follow</a>
                     </div>
                   </li>
-                  <li>
-                    <span>02</span>
-                    <img src="{{asset('images/avatar-02.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; margin-right: 15px;">
-                    <h6><i class="fa fa-check"></i> Kengan</h6>
-                    <div class="main-button">
-                      <a href="#">Follow</a>
-                    </div>
-                  </li>
-                  <li>
-                    <span>03</span>
-                    <img src="{{asset('images/avatar-03.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; margin-right: 15px;">
-                    <h6><i class="fa fa-check"></i> Areluwa</h6>
-                    <div class="main-button">
-                      <a href="#">Follow</a>
-                    </div>
-                  </li>
-                  <li>
-                    <span>04</span>
-                    <img src="{{asset('images/avatar-04.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; margin-right: 15px;">
-                    <h6><i class="fa fa-check"></i> Omeg</h6>
-                    <div class="main-button">
-                      <a href="#">Follow</a>
-                    </div>
-                  </li>
-                  <li>
-                    <span>05</span>
-                    <img src="{{asset('images/avatar-01.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; margin-right: 15px;">
-                    <h6><i class="fa fa-check"></i> GangTeam</h6>
-                    <div class="main-button">
-                      <a href="#">Follow</a>
-                    </div>
-                  </li>
+                  <?php $stt++; ?>
+                  @endforeach
+
                 </ul>
               </div>
             </div>
@@ -237,10 +67,11 @@ https://templatemo.com/tm-579-cyborg-gaming
               </div>
             </div>
             <div class="row">
+              @foreach($lives as $live)
               <div class="col-lg-3 col-sm-6">
                 <div class="item">
                   <div class="thumb">
-                    <img src="{{asset('images/stream-05.jpg')}}" alt="">
+                    <img src="{{asset($live->post_image)}}" alt="">
                     <div class="hover-effect">
                       <div class="content">
                         <div class="live">
@@ -258,185 +89,11 @@ https://templatemo.com/tm-579-cyborg-gaming
                       <img src="{{asset('images/avatar-01.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
                     </div>
                     <span><i class="fa fa-check"></i> Kengan Omeg</span>
-                    <h4>Just Talking With Fans</h4>
+                    <h4>{{$live->title}}</h4>
                   </div> 
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-06.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-02.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> LahutaMalc</span>
-                    <h4>CS-GO 36 Hours Live Stream</h4>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-07.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-03.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> Areluwa</span>
-                    <h4>Maybe Nathej Allnight Chillin'</h4>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-08.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-04.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> NewGangTeam</span>
-                    <h4>Live Streaming Till Morning</h4>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-07.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-01.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> Kengan Omeg</span>
-                    <h4>Just Talking With Fans</h4>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-08.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-02.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> LahutaMalc</span>
-                    <h4>CS-GO 36 Hours Live Stream</h4>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-05.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-03.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> Areluwa</span>
-                    <h4>Maybe Nathej Allnight Chillin'</h4>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <img src="{{asset('images/stream-06.jpg')}}" alt="">
-                    <div class="hover-effect">
-                      <div class="content">
-                        <div class="live">
-                          <a href="#">Live</a>
-                        </div>
-                        <ul>
-                          <li><a href="#"><i class="fa fa-eye"></i> 1.2K</a></li>
-                          <li><a href="#"><i class="fa fa-gamepad"></i> CS-GO</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="down-content">
-                    <div class="avatar">
-                      <img src="{{asset('images/avatar-04.jpg')}}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
-                    </div>
-                    <span><i class="fa fa-check"></i> NewGangTeam</span>
-                    <h4>Live Streaming Till Morning</h4>
-                  </div> 
-                </div>
-              </div>
+              @endforeach
               <div class="col-lg-12">
                 <div class="main-button">
                   <a href="streams.html">Load More Streams</a>
@@ -451,20 +108,7 @@ https://templatemo.com/tm-579-cyborg-gaming
     </div>
   </div>
   
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
-          
-          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  @extends('layouts.reuse.linkScript')
+  @include('layouts.reuse.footer')
 
 
   </body>

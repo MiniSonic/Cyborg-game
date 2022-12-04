@@ -1,85 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Cyborg - Awesome HTML5 Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('css/templatemo-cyborg-gaming.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.css')}}">
-    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
-
-TemplateMo 579 Cyborg Gaming
-
-https://templatemo.com/tm-579-cyborg-gaming
-
--->
-  </head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="{{asset('images/logo.png')}}" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Search End ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Search End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="browse.html" class="active">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="streams.html">Streams</a></li>
-                        <li><a href="profile.html">Profile <img src="{{asset('images/profile-header.jpg')}}" alt=""></a></li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-  </header>
+@include('layouts.reuse.header')
   <!-- ***** Header Area End ***** -->
 
   <div class="container">
@@ -95,6 +14,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h4><em>Featured</em> Games</h4>
                 </div>
                 <div class="owl-features owl-carousel">
+                  @foreach($featured as $item)
                   <div class="item">
                     <div class="thumb">
                       <img src="{{asset('images/featured-01.jpg')}}" alt="">
@@ -102,77 +22,13 @@ https://templatemo.com/tm-579-cyborg-gaming
                         <h6>2.4K Streaming</h6>
                       </div>
                     </div>
-                    <h4>CS-GO<br><span>249K Downloads</span></h4>
+                    <h4>{{$item->title}}<br><span>249K Downloads</span></h4>
                     <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
+                      <li><i class="fa fa-star"></i>{{$item->votes}}</li>
+                      <li><i class="fa fa-download"></i>{{$item->downloads}}</li>
                     </ul>
                   </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-02.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Gamezer<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-03.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Island Rusty<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-01.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>CS-GO<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-02.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Gamezer<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="{{asset('images/featured-03.jpg')}}" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Island Rusty<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
+                  @endforeach
                 </div>
               </div>
             </div>
@@ -182,39 +38,21 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h4><em>Top</em> Downloaded</h4>
                 </div>
                 <ul>
+                  @foreach($downloaded as $item)
                   <li>
                     <img src="{{asset('images/game-01.jpg')}}" alt="" class="templatemo-item">
-                    <h4>Fortnite</h4>
-                    <h6>Sandbox</h6>
-                    <span><i class="fa fa-star" style="color: yellow;"></i> 4.9</span>
-                    <span><i class="fa fa-download" style="color: #ec6090;"></i> 2.2M</span>
+                    <h4>{{$item->title}}</h4>
+                    <h6>{{$item->category}}</h6>
+                    <span><i class="fa fa-star" style="color: yellow;"></i> {{$item->votes}}</span>
+                    <span><i class="fa fa-download" style="color: #ec6090;"></i>{{$item->downloads}}</span>
                     <div class="download">
                       <a href="#"><i class="fa fa-download"></i></a>
                     </div>
                   </li>
-                  <li>
-                    <img src="{{asset('images/game-02.jpg')}}" alt="" class="templatemo-item">
-                    <h4>CS-GO</h4>
-                    <h6>Legendary</h6>
-                    <span><i class="fa fa-star" style="color: yellow;"></i> 4.9</span>
-                    <span><i class="fa fa-download" style="color: #ec6090;"></i> 2.2M</span>
-                    <div class="download">
-                      <a href="#"><i class="fa fa-download"></i></a>
-                    </div>
-                  </li>
-                  <li>
-                    <img src="{{asset('images/game-03.jpg')}}" alt="" class="templatemo-item">
-                    <h4>PugG</h4>
-                    <h6>Battle Royale</h6>
-                    <span><i class="fa fa-star" style="color: yellow;"></i> 4.9</span>
-                    <span><i class="fa fa-download" style="color: #ec6090;"></i> 2.2M</span>
-                    <div class="download">
-                      <a href="#"><i class="fa fa-download"></i></a>
-                    </div>
-                  </li>
+                  @endforeach
                 </ul>
                 <div class="text-button">
-                  <a href="profile.html">View All Games</a>
+                  <a href="{{route('home')}}">View All Games</a>
                 </div>
               </div>
             </div>
@@ -387,22 +225,6 @@ https://templatemo.com/tm-579-cyborg-gaming
     </div>
   </div>
   
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
-          
-          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  @extends('layouts.reuse.linkScript')
-
-
-  </body>
+  @include('layouts.reuse.footer')
 
 </html>

@@ -68,7 +68,7 @@
                         <li><a href="{{route('home')}}" class="active">Home</a></li>
                         <li><a href="{{route('browse')}}">Browse</a></li>
                         <li><a href="{{route('details')}}">Details</a></li>
-                        <li><a href="{{route('streams')}}">Streams</a></li>
+                        <li><a href="{{route('streams.index')}}">Streams</a></li>
                         <li><a href="{{route('proflie')}}">Profile <img src="{{ asset('images/profile-header.jpg') }}"
                                     alt=""></a></li>
                     </ul>

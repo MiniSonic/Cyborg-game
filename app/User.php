@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'username', 'avatar',
     ];
 
     /**
@@ -38,10 +40,28 @@ class User extends Authenticatable
     ];
 
 
-    public function roles(){
-        $this->hasMany(Role::class);
-    }
     public function permissions(){
-        $this->hasMany(Permission::class);
+        return $this->belongsToMany(Permission::class);
+    }
+    public function roles(){
+        return $this->belongsToMany(Role::class);
+    }
+    public function games(){
+        return $this->hasMany(Game::class);
+    }
+    public function userHasRole($role_name){
+        foreach($this->roles as $role){
+            if($role_name == $role->name){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function lives(){
+        return $this->hasMany(Live::class);
     }
 }
+    
+
+

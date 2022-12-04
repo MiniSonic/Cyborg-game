@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Permission extends Model
 {
     //
-    protected $guarded = [];
+    protected $fillable = [
+        'name', 'slug', 
+    ];
 
     public function roles(){
-        $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class);
     }
     public function users(){
-        $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class);
     }
 }
