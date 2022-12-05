@@ -35,3 +35,12 @@ Route::get('/details/{game}', 'GameController@show' )->name('game.show');
 
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 Route::get('/admin/users', 'AdminController@userShow')->name('admin.userShow');
+
+
+Route::get('/admin/games', 'AdminController@gameShow')->name('admin.gameShow');
+
+
+Route::get('/admin/lives', 'AdminController@liveShow')->name('admin.liveShow');
+
+
+Route::get('/admin/streamers', 'AdminController@streamerShow')->name('admin.streamerShow');

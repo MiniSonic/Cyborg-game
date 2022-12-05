@@ -15,7 +15,7 @@
         </a>
         <ul id="users-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
+            <a href="{{route('admin.userShow')}}">
               <i class="bi bi-circle"></i><span>All User</span>
             </a>
           </li>
@@ -33,7 +33,7 @@
         </a>
         <ul id="games-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="{{route('admin.gameShow')}}">
               <i class="bi bi-circle"></i><span>All Game</span>
             </a>
           </li>
@@ -48,11 +48,11 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#lives-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-layout-text-window-reverse"></i><span>Lives</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="lives-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="{{route('admin.liveShow')}}">
               <i class="bi bi-circle"></i><span>All Live</span>
             </a>
           </li>
@@ -70,7 +70,7 @@
         </a>
         <ul id="streamers-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="charts-chartjs.html">
+            <a href="{{route('admin.streamerShow')}}">
               <i class="bi bi-circle"></i><span>All Streamer</span>
             </a>
           </li>

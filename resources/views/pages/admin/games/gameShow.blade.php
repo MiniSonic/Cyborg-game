@@ -4,11 +4,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>All User</h1>
+            <h1>All Game</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                    <li class="breadcrumb-item">User</li>
+                    <li class="breadcrumb-item">Games</li>
                     <li class="breadcrumb-item active">All</li>
                 </ol>
             </nav>
@@ -20,29 +20,29 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">View all user</h5>
+                            <h5 class="card-title">View all games</h5>
 
                             <!-- Default Table -->
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Userame</th>
-                                        <th scope="col">Avatar</th>
-                                        <th scope="col">Email</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Downloads</th>
+                                        <th scope="col">Votes</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $n = 1; ?>
-                                    @foreach ($users as $user)
+                                    @foreach ($games as $game)
                                         <tr>
                                             <th scope="row">{{ $n }}</th>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->username }}</td>
-                                            <td>Image</td>
-                                            <td>{{ $user->email }}</td>
+                                            <td>{{ $game->title }}</td>
+                                            <td>{{ $game->category }}</td>
+                                            <td>{{ $game->downloads }}</td>
+                                            <td>{{$game->votes}}</td>
                                             <td>
                                                 <form action="" method="post" class="d-inline-block mr-5">
                                                     @csrf

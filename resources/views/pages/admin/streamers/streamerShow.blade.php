@@ -8,7 +8,7 @@
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                    <li class="breadcrumb-item">User</li>
+                    <li class="breadcrumb-item">Streamer</li>
                     <li class="breadcrumb-item active">All</li>
                 </ol>
             </nav>
@@ -27,7 +27,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Name</th>
+                                        <th scope="col">Streamer Name</th>
                                         <th scope="col">Userame</th>
                                         <th scope="col">Avatar</th>
                                         <th scope="col">Email</th>
@@ -36,13 +36,13 @@
                                 </thead>
                                 <tbody>
                                     <?php $n = 1; ?>
-                                    @foreach ($users as $user)
+                                    @foreach ($streamers as $streamer)
                                         <tr>
                                             <th scope="row">{{ $n }}</th>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->username }}</td>
+                                            <td>{{ $streamer->name }}</td>
+                                            <td>{{ $streamer->username }}</td>
                                             <td>Image</td>
-                                            <td>{{ $user->email }}</td>
+                                            <td>{{ $streamer->email }}</td>
                                             <td>
                                                 <form action="" method="post" class="d-inline-block mr-5">
                                                     @csrf

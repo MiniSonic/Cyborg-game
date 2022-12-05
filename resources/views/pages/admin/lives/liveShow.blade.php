@@ -8,7 +8,7 @@
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                    <li class="breadcrumb-item">User</li>
+                    <li class="breadcrumb-item">Live</li>
                     <li class="breadcrumb-item active">All</li>
                 </ol>
             </nav>
@@ -20,35 +20,28 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">View all user</h5>
+                            <h5 class="card-title">View all live</h5>
 
                             <!-- Default Table -->
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Userame</th>
-                                        <th scope="col">Avatar</th>
-                                        <th scope="col">Email</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">by User</th>
+                                        <th scope="col">by Game</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $n = 1; ?>
-                                    @foreach ($users as $user)
+                                    @foreach ($lives as $live)
                                         <tr>
                                             <th scope="row">{{ $n }}</th>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->username }}</td>
-                                            <td>Image</td>
-                                            <td>{{ $user->email }}</td>
+                                            <td>{{ $live->title }}</td>
+                                            <td>User</td>
+                                            <td>Game</td>
                                             <td>
-                                                <form action="" method="post" class="d-inline-block mr-5">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button class="btn btn-secondary">Edit</button>
-                                                </form>
                                                 <form action="" method="post" class="d-inline-block">
                                                     @csrf
                                                     @method('DELETE')
